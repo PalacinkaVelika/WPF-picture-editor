@@ -14,12 +14,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPF_picture_editor {
-    /// <summary>
-    /// Interakční logika pro MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window {
+        /// <summary>
+        /// tohle funguje jako main class
+        /// Inicializuji se tu všechny classy 
+        /// </summary>
+
+        // Vlastnosti
+
+        // Konstruktor
         public MainWindow() {
             InitializeComponent();
+        }
+        // Metody volané tlačítky (logika metod je lepší když je v jiné třídě)
+        private void TlacitkemVolanaMetoda() {
+            Console.WriteLine("hi mom");
         }
     }
 }
