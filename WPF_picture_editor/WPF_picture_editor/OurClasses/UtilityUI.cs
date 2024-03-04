@@ -5,19 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WPF_picture_editor.OurClasses {
-    class Filtering {
+    class UtilityUI {
         /// <summary>
-        /// Logika filtrování nahraných obrázků
+        /// Metody volané UI komponentami (Logika pro ty metody!!!!)
         /// </summary>
 
         // Vlastnosti
+        Filtering filtering;
+        FileLoader fileLoader;
 
         // Konstruktor
-        public Filtering() {
-
+        public UtilityUI() {
+            filtering = new Filtering();
+            fileLoader = new FileLoader();
         }
-
         // Metody
 
+
     }
+
+
 }
