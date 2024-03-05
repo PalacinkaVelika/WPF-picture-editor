@@ -45,7 +45,7 @@ namespace WPF_picture_editor {
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-
+            utility.ApplyFilter(Filter.Cernobily);
         }
     }
 }
