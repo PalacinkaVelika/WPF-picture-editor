@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_picture_editor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#FF232323">
     <Grid>
-        
+        <Grid HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <GridSplitter HorizontalAlignment="Left" Height="399" Margin="10,0,0,0" VerticalAlignment="Top" Width="560" Background="#FF4F4F4F"/>
+            <GridSplitter HorizontalAlignment="Left" Height="399" Margin="575,0,0,0" VerticalAlignment="Top" Width="197" Background="#FF4F4F4F" DragDelta="GridSplitter_DragDelta"/>
+            <Button Content="Nahrát fotku" HorizontalAlignment="Left" Margin="588,10,0,0" VerticalAlignment="Top" Width="174" Height="24" Click="Button_Click_1"/>
+            <Label Content="Filtry" HorizontalAlignment="Left" Margin="656,57,0,316"/>
+            <GridSplitter HorizontalAlignment="Left" Height="301" Margin="588,88,0,0" VerticalAlignment="Top" Width="174" DragDelta="GridSplitter_DragDelta" Background="#FF383838"/>
+            <Button Content="Černobílá" HorizontalAlignment="Left" Margin="600,99,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,140,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,182,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,225,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,266,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,308,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,350,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Image x:Name="ImageHolder" HorizontalAlignment="Left" Height="399" Margin="10,0,0,0" VerticalAlignment="Top" Width="560"/>
+        </Grid>
     </Grid>
 </Window>

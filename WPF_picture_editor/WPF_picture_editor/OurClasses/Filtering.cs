@@ -18,6 +18,8 @@ namespace WPF_picture_editor.OurClasses {
         }
 
         // Metody
+        public void Cernobily() {
 
+        }
     }
 }
