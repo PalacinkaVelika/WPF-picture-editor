@@ -34,7 +34,7 @@ namespace WPF_picture_editor {
         // Nahrát fotku
         private void Button_Click_1(object sender, RoutedEventArgs e) {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "All files (*.*)|*.*"; // You can customize the file filter as needed
+            openFileDialog.Filter = "PNG files (*.png)|*.png|JPEG files (*.jpeg;*.jpg)|*.jpeg;*.jpg"; // You can customize the file filter as needed
 
             if(openFileDialog.ShowDialog() == true) {
                 string selectedFilePath = openFileDialog.FileName;

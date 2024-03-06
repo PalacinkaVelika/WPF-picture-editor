@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,24 +24,21 @@ namespace WPF_picture_editor.OurClasses {
         }
         // Metody
         public void LoadPicture(string file_path) {
-            // Call FileLoader function that handles correct format and such
-
-            // Save it as ThePicture
-            SetPicture(null);
+            SetPicture(fileLoader.LoadPictureAsBitmap(file_path));
         }
 
         void SetPicture(BitmapImage pic) {
-
+            picture = pic;
         }
         public BitmapImage GetPicture() {
-            return null;
+            return picture;
 
         }
 
         public void ApplyFilter(Filter filter) {
             switch(filter) {
                 case Filter.Cernobily:
-                    filtering.Cernobily();
+                    picture = filtering.Cernobily();
                     break;
                 case Filter.Sepia:
                     break;

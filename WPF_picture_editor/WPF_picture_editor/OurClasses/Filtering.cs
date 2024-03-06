@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace WPF_picture_editor.OurClasses {
     class Filtering {
@@ -18,8 +19,9 @@ namespace WPF_picture_editor.OurClasses {
         }
 
         // Metody
-        public void Cernobily() {
+        public BitmapImage Cernobily() {
 
+            return null;
         }
     }
 }
