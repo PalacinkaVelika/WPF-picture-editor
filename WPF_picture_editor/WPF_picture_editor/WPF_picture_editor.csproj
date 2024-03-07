@@ -70,6 +70,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OurClasses\Canvas.cs" />
     <Compile Include="OurClasses\UtilityUI.cs" />
     <Compile Include="OurClasses\Filtering.cs" />
     <Compile Include="OurClasses\FileLoader.cs" />
