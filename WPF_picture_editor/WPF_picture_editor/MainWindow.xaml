@@ -13,8 +13,8 @@
             <Button Content="Nahrát fotku" HorizontalAlignment="Left" Margin="588,10,0,0" VerticalAlignment="Top" Width="174" Height="24" Click="Button_Click_1"/>
             <Label Content="Filtry" HorizontalAlignment="Left" Margin="656,57,0,316"/>
             <GridSplitter HorizontalAlignment="Left" Height="301" Margin="588,88,0,0" VerticalAlignment="Top" Width="174" Background="#FF383838"/>
-            <Button Content="Černobílá" HorizontalAlignment="Left" Margin="600,99,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
-            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,140,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
+            <Button Content="Černobílá" HorizontalAlignment="Left" Margin="600,99,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="BW"/>
+            <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,140,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Sepia"/>
             <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,182,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
             <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,225,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>
             <Button Content="Sépie" HorizontalAlignment="Left" Margin="600,266,0,0" VerticalAlignment="Top" Width="150" Height="24" Click="Button_Click"/>

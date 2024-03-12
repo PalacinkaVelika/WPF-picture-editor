@@ -24,9 +24,9 @@ namespace WPF_picture_editor.OurClasses {
             fileLoader = new FileLoader();
         }
         // Metody
-        public void LoadPicture(string file_path) {
+        public void LoadPicture(string file_path)
+        {
             SetPicture(fileLoader.LoadPictureAsBitmap(file_path));
-
         }
 
         void SetPicture(BitmapImage pic) {
@@ -39,18 +39,15 @@ namespace WPF_picture_editor.OurClasses {
 
         }
 
-        public BitmapImage ApplyFilter(Filter filter) {
-            picture = filtering.ApplyFilter(filter);
+        public BitmapImage ApplyFilter(Filter filter)
+        {
+            picture = filtering.Apply(filter);
+            return picture;
+        }
 
-
-        public void SavePictureAsFile() {
+        public void SavePictureAsFile()
+        {
         }
     }
-
-
-    public enum Filter {
-        Cernobily,
-        Sepia
-    }
-
 }
+

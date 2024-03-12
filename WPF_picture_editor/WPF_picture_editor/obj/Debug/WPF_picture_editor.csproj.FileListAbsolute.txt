@@ -35,3 +35,11 @@ C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\
 C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\WPF_picture_editor_MarkupCompile.lref
 C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\WPF_picture_editor.exe
 C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\WPF_picture_editor.pdb
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\bin\Debug\WPF_picture_editor.exe.config
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\bin\Debug\WPF_picture_editor.exe
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\bin\Debug\WPF_picture_editor.pdb
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\MainWindow.baml
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\WPF_picture_editor.g.resources
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\WPF_picture_editor.Properties.Resources.resources
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\WPF_picture_editor.csproj.GenerateResource.cache
+C:\Users\bruli\Desktop\WPF-picture-editor\WPF_picture_editor\WPF_picture_editor\obj\Debug\WPF_picture_editor.csproj.CoreCompileInputs.cache

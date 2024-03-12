@@ -44,8 +44,18 @@ namespace WPF_picture_editor {
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
-            ImageHolder.Source = utility.ApplyFilter(Filter.Cernobily);
+        private void BW(object sender, RoutedEventArgs e) {
+            ImageHolder.Source = utility.ApplyFilter(Filter.BlackWhite);
+        }
+
+        private void Sepia(object sender, RoutedEventArgs e)
+        {
+            ImageHolder.Source = utility.ApplyFilter(Filter.Sepia);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }
