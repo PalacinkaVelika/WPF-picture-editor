@@ -40,21 +40,13 @@ namespace WPF_picture_editor.OurClasses {
         }
 
         public BitmapImage ApplyFilter(Filter filter) {
-            switch(filter) {
-                case Filter.Cernobily:
-                    picture = filtering.Cernobily();
-                    return picture;
-                case Filter.Sepia:
-                    return picture;
-            }
-            return picture;
-        }
+            picture = filtering.ApplyFilter(filter);
+
 
         public void SavePictureAsFile() {
-
         }
-
     }
+
 
     public enum Filter {
         Cernobily,

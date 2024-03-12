@@ -11,40 +11,65 @@ using System.IO;
 namespace WPF_picture_editor.OurClasses {
     class Filtering {
         /// <summary>
-        /// Logika filtrování nahraných obrázků
+        /// Filter logic
         /// </summary>
 
-        // Vlastnosti
+        // Utilities
         public BitmapImage picture;
 
-        // Konstruktor
+        // Constructor
         public Filtering() {
             this.picture = null;
         }
 
 
-        // Metody
-        public BitmapImage Cernobily() {
+        // Main Method
+        public BitmapImage ApplyFilter(Filter filter)
+        {
             BitmapSource bitmapSource = picture;
-            WriteableBitmap blackAndWhiteBitmap = new WriteableBitmap(bitmapSource.PixelWidth, bitmapSource.PixelHeight, bitmapSource.DpiX, bitmapSource.DpiY, PixelFormats.Bgra32, null);
+            WriteableBitmap filteredBitmap = new WriteableBitmap(bitmapSource.PixelWidth, bitmapSource.PixelHeight, bitmapSource.DpiX, bitmapSource.DpiY, PixelFormats.Bgra32, null);
 
-            // Získat byte array z původního obrázku
+            // Get array of bites from picture
             byte[] pixels = new byte[bitmapSource.PixelWidth * bitmapSource.PixelHeight * 4];
             bitmapSource.CopyPixels(pixels, bitmapSource.PixelWidth * 4, 0);
 
-            // Projít všechny pixely a změnit je na černobílé
-            for (int i = 0; i < pixels.Length; i += 4)
+            switch (filter)
             {
-                byte gray = (byte)(0.30 * pixels[i + 2] + 0.59 * pixels[i + 1] + 0.11 * pixels[i]); // Vypočítat jas
-                pixels[i] = pixels[i + 1] = pixels[i + 2] = gray; // Nastavit červenou, zelenou a modrou složku na hodnotu jasu
+                case Filter.BlackWhite:
+                    pixels = BlackWhite(pixels);
+
+                case Filter.Sepia:
+                  
             }
 
-            BitmapSource resultBitmap = BitmapSource.Create(blackAndWhiteBitmap.PixelWidth, blackAndWhiteBitmap.PixelHeight, blackAndWhiteBitmap.DpiX, blackAndWhiteBitmap.DpiY, PixelFormats.Bgr32, null, pixels, blackAndWhiteBitmap.PixelWidth * 4);
+            BitmapSource resultBitmap = BitmapSource.Create(filteredBitmap.PixelWidth, filteredBitmap.PixelHeight, filteredBitmap.DpiX, filteredBitmap.DpiY, PixelFormats.Bgr32, null, pixels, filteredBitmap.PixelWidth * 4);
+            BitmapImage resultImage = transformResult(resultBitmap)
+            return resultImage;
+        }
+    }
 
-            // Vytvořit nový BitmapImage
+        //private Methods
+        BitmapImage BlackWhite(byte[] pixels) {
+
+            for (int i = 0; i < pixels.Length; i += 4)
+            {
+                byte gray = (byte)(0.30 * pixels[i + 2] + 0.59 * pixels[i + 1] + 0.11 * pixels[i]); // Calculate Brightness
+                pixels[i] = pixels[i + 1] = pixels[i + 2] = gray; // Set R, G, B to brightness level
+            }
+
+            return pixels;
+        }
+
+
+
+
+
+        BitmapImage transformResult(BitmapSource resultBitmap)
+        {
             BitmapImage resultImage = new BitmapImage();
 
-            // Načíst nově vytvořený BitmapSource do BitmapImage
+
+            // transform from BitmapSoure to BitmapImage
             using (MemoryStream memoryStream = new MemoryStream())
             {
                 BitmapEncoder encoder = new PngBitmapEncoder();
@@ -57,8 +82,6 @@ namespace WPF_picture_editor.OurClasses {
                 resultImage.StreamSource = memoryStream;
                 resultImage.EndInit();
             }
-
-            return resultImage;
         }
     }
 }
